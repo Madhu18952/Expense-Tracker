@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shared Multi-User Monthly Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Shared Multi-User Monthly Expense Tracker</h1>
+
+    <div id="authSection" class="auth-section">
+      <input type="text" id="username" placeholder="Enter your username">
+      <button onclick="login()">Login / Register</button>
+    </div>
+
+    <div id="expenseSection" style="display:none;">
+      <h2 id="welcomeMsg"></h2>
+      <div class="expense-form">
+        <select id="monthSelect">
+          <option value="January">January</option>
+          <option value="February">February</option>
+          <option value="March">March</option>
+          <option value="April">April</option>
+          <option value="May">May</option>
+          <option value="June">June</option>
+          <option value="July">July</option>
+          <option value="August">August</option>
+          <option value="September">September</option>
+          <option value="October">October</option>
+          <option value="November">November</option>
+          <option value="December">December</option>
+        </select>
+        <input type="text" id="expenseName" placeholder="Expense Name">
+        <input type="number" id="expenseAmount" placeholder="Expense Amount">
+        <button onclick="addExpense()">Add Expense</button>
+      </div>
+
+      <div id="usersExpensesContainer"></div>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
